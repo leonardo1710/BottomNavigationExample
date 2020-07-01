@@ -16,16 +16,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         //bind the activity_main.xml to variable
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
         //instantiate the navController from NavHostFragment
         navController = this.findNavController(R.id.myNavHostFragment)
-
         //enable the back button in top actionbar
         NavigationUI.setupActionBarWithNavController(this, navController)
-
         //enable navigation component with bottom navigation view
         NavigationUI.setupWithNavController(binding.bottomNavigation, navController)
     }
